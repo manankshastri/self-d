@@ -7,10 +7,12 @@ img = mpimg.imread('solidWhiteRight.jpg')
 
 gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0)
-sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1)
+sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize=9)
+sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize=9)
 
-abs_sobelx = np.absolute(sobelx)
+z = sobelx + sobely
+
+abs_sobelx = np.absolute(z)
 
 scaled_sobel = np.uint8(255*abs_sobelx/np.max(abs_sobelx))
 
