@@ -22,9 +22,11 @@ thresholds = (image[:,:,0] < rgb_threshold[0]) | (image[:,:,1] < rgb_threshold[1
 color_select[thresholds] = [0,0,0]
 
 
-plt.subplot(221), plt.imshow(image)
-plt.axis('off')
-plt.subplot(222), plt.imshow(color_select)
-plt.axis('off')
-plt.show()
-
+#plt.subplot(221), plt.imshow(image)
+#plt.axis('off')
+#plt.subplot(222), plt.imshow(color_select)
+#plt.axis('off')
+#plt.show()
+print(xsize)
+print(int(xsize/13))
+print(int((xsize/13)))
