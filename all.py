@@ -1,7 +1,9 @@
 import numpy as np
 
-a = np.array([1, 2, 3, 4, 5])
-print("a: ", a)
-print("a[4]: ", a[4])
-print("a[-1]: ", a[-1])
+region = np.array([[1, 2, 3],[1,2, 3], [1, 2, 3]])
 
+sx = np.array([[-1, 0, 1],[-2,0, 2], [-1, 0, -1]])
+sy = sx.T
+z = region * sx
+
+print(z)
