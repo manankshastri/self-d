@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 import numpy as np
 import cv2
 
-image = mpimg.imread('signs_vehicles_xygrad.png')
+image = mpimg.imread('bridge_shadow.jpg')
 
 def abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(20, 100)):
     # Calculate directional gradient

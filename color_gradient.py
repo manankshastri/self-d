@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 
 # Read in an image, you can also try test1.jpg or test4.jpg
-img = mpimg.imread('test6.jpg') 
+img = mpimg.imread('bridge_shadow.jpg') 
 
 
 # Convert to HLS color space and separate the S channel
@@ -43,10 +43,10 @@ combined_binary = np.zeros_like(sxbinary)
 combined_binary[(s_binary == 1) | (sxbinary == 1)] = 1
 
 # Plotting thresholded images
-f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20,10))
-ax1.set_title('Stacked thresholds')
-ax1.imshow(color_binary)
+#f, (ax1, ax2) = plt.subplots(1, 2, figsize=(20,10))
+#ax1.set_title('Stacked thresholds')
+#ax1.imshow(color_binary)
 
-ax2.set_title('Combined S channel and gradient thresholds')
-ax2.imshow(combined_binary, cmap='gray')
+#ax2.set_title('Combined S channel and gradient thresholds')
+plt.imshow(combined_binary, cmap='gray')
 plt.show()

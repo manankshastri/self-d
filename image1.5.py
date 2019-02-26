@@ -33,7 +33,7 @@ lines = cv2.HoughLinesP(masked_edges, rho, theta, threshold, np.array([]),
 # Iterate over the output "lines" and draw lines on the blank
 for line in lines:
     for x1,y1,x2,y2 in line:
-        cv2.line(line_image,(x1,y1),(x2,y2),(255,0,0),10)
+        cv2.line(line_image,(x1,y1),(x2,y2),(255,255,255),10)
 
 # Create a "color" binary image to combine with line image
 color_edges = np.dstack((masked_edges, masked_edges, masked_edges)) 
