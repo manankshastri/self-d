@@ -6,11 +6,10 @@ def sig(x):
     return 1./(1 + np.exp(-x))
 
 
-def a1(x, y):
-    return sig(4*x + 5*y - 9)
+def a1(x, y, z):
+    return sig(0.4*x + 0.6*y + z)
 
 
-print(a1(1, 1))
-print(a1(2, 4))
-print(a1(5, -5))
-print(a1(-4, 5))
+print(a1(2, 6, -2))
+print(a1(3, 5, -2.2))
+print(a1(5, 4, -3))
