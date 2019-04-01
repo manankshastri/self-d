@@ -22,7 +22,7 @@ MatrixXd H;	// measurement matrix
 MatrixXd R;	// measurement covariance matrix
 MatrixXd I; // Identity matrix
 MatrixXd Q;	// process covariance matrix
-VectorXd y;
+VectorXd y; 
 MatrixXd S;
 MatrixXd K;
 
