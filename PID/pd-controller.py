@@ -133,6 +133,21 @@ def run(robot, tau_p, tau_d, n=100, speed=1.0):
         y_trajectory.append(robot.y)
     return x_trajectory, y_trajectory
 
+
+# def check(robot, tau_p, tau_d, n=100, speed=1.0):
+#     x_trajectory = []
+#     y_trajectory = []
+#     prev_cte = robot.y
+#     for i in range(n):
+#         cte = robot.y
+#         diff_cte = cte - prev_cte
+#         prev_cte = cte
+#         steering = -tau_p * cte - tau_d * diff_cte
+#         h = robot.move(steering, speed)
+#         print(robot.__repr__())
+
+# check(robot, 0.25, 3.0)
+
 x_trajectory, y_trajectory = run(robot, 0.2, 0.0)
 x_trajectory_1, y_trajectory_1 = run(robot, 0.2, 3.0)
 n = len(x_trajectory)
