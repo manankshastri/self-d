@@ -121,6 +121,7 @@ def run(robot, tau_p, tau_d, n=100, speed=1.0):
     x_trajectory = []
     y_trajectory = []
     # TODO: your code here
+    robot.set_steering_drift(10.0/180.0 * np.pi)    # 10 degree systematic bias
     prev_cte = robot.y
     for i in range(n):
         cte = robot.y
@@ -132,8 +133,8 @@ def run(robot, tau_p, tau_d, n=100, speed=1.0):
         y_trajectory.append(robot.y)
     return x_trajectory, y_trajectory
 
-x_trajectory, y_trajectory = run(robot, 0.2, 3.0)
-x_trajectory_1, y_trajectory_1 = run_p(robot, 0.1)
+x_trajectory, y_trajectory = run(robot, 0.2, 0.0)
+x_trajectory_1, y_trajectory_1 = run(robot, 0.2, 3.0)
 n = len(x_trajectory)
 n1 = len(x_trajectory_1)
 
